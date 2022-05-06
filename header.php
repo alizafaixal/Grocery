@@ -31,14 +31,12 @@ $totalProduct=$obj->totalProduct();
                     <ul id="MenuItems">
                         <li><a href="index.php">Home</a></li>
                         <li><a href="products.php">Product</a></li>
-                        <li><a href="home.php">Discussion Forum</a></li>
-                    
                         <li><a href="contact.php">Contact</a></li>
                         <?php if (isset($_SESSION['USER_LOGIN'])){ ?>
                             <li><a href="logout.php">Logout</a></li>
                             <li><a href="myorders.php">My orders</a></li>
                         <?php }else{ ?>
-                            <li><a href="account.php">Login/Register</a></li>
+                            <li><a href="login.php">Login/Register</a></li>
                        <?php } ?>
                       
 

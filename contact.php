@@ -15,7 +15,7 @@ include('header.php');
                     <label for="email">Your email address:</label>
                     <input type="email" id="email" name="email"><br>
                     <label for="number">Your phone number:</label>
-                    <input type="number" id="number" name="number"><br>
+                    <input type="text" id="number" name="number"><br>
                     <label for="EnquiryTopic">What is your enquiry or feedback about?*</label>
                     <select name="EnquiryTopic" id="EnquiryTopic">
                         <option value="">Select</option>

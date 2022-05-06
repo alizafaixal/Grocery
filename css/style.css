@@ -4,6 +4,12 @@
     padding: 0;
     
 }
+.formH2-login{
+ margin-top: -20px;
+}
+.formH2-register{
+    margin-top: -40px;
+   }
 a{
     text-decoration: none;
 }

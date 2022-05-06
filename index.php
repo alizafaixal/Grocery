@@ -33,73 +33,7 @@ include('header.php');
     <!-- products -->
 
     <div class="small-container">
-        <h2 class="title">Featured Products</h2>
-        <div class="row">
-            <div class="col-4">
-                <img src="images/product3.jpg" alt="">
-                <h4>Long Melon min. 900g</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                </div>
-                <p>Approximately $3.52 900g ($3.92 per kg)</p>
-            </div>
-            <div class="col-4">
-                <img src="images/product2.jpg" alt="">
-                <h4>Kurkure Masala Munch</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                </div>
-                <p>$1.89 each</p>
-            </div>
-            <div class="col-4">
-                <img src="images/product1.jpg" alt="">
-                <h4>Mapro Strawberry 700ml</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                </div>
-                <p>$6.00 each</p>
-            </div>
-            <div class="col-4">
-                <img src="images/product4.jpg" alt="">
-                <h4>Haldiram's Soan Papdi Yelllo 250g</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                </div>
-                <p>$3.10 each</p>
-            </div>
-
-        </div>
-        <div class="comp_des">
-        <div class="small-container">
-            <div class="row">
-                <div class="col-2">
-                    <img src="images/discussion_forum.jpg" alt="">
-                </div>
-                <div class="col-2">
-                    <p>Look for frequently asked questions in the discussion forum, post a question, see previous topics and post and reply on post many more.</p>
-                    <a href="home.php" class="btn">View Discussion Forum</a>
-                </div>
-            </div>
-        </div>
-    </div>
-        
-        <h2 class="title">Latest Products</h2>
+        <h2 class="title">All Products</h2>
         <div class="row">
         <?php
         $sql = 'SELECT * FROM product  where product_status =1 ';
@@ -113,7 +47,7 @@ include('header.php');
         ?>  
           <div class="col-4">
                 <a href="product.php?id=<?php echo $list['product_id'];?>">  <img src="<?php echo $list['product_img'];?>" alt=""></a>
-                    <h4><?php echo $list['product_name'];?></h4>
+                <a href="product.php?id=<?php echo $list['product_id'];?>"> <h4><?php echo $list['product_name'];?></h4> </a>
                     <div class="rating">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -123,6 +57,7 @@ include('header.php');
                     </div>
                
                     <p><?php echo '$' . $list['product_price'];?></p>
+                    <a  class="btn" href="product.php?id=<?php echo $list['product_id'];?>">View details</a>
                 </div>
          <?php } ?>
        

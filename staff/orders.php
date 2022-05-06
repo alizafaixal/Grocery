@@ -1,5 +1,6 @@
 <?php
 include('header.inc.php');
+$seqID =1;
 $sql = "SELECT * FROM orders ORDER BY `added_on` desc";
 $orders = array();
 $res = mysqli_query($conn, $sql)
@@ -54,7 +55,7 @@ if($type=='delete'){
                                      <?php
                                      foreach($orders as $list){?>
                                      <tr>
-                                     <td><a  class="btn" href="orderDetails.php?id=<?php echo $list['id']?>"><?php echo $list['id']?></a></td>
+                                     <td><a  class="btn" href="orderDetails.php?id=<?php echo $list['id']?>"><?php echo $seqID++?></a></td>
                                      <td><?php echo $list['user_id'] ?></td>
                                      <td><?php echo $list['address'] ?></td>
                                      <td><?php echo $list['city'] ?></td>

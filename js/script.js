@@ -56,6 +56,9 @@ function sendMsg() {
     else if (email == '') {
         alert('please enter email');
     }
+    else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))){
+        alert("Please enter correct email format");
+   }
     else if (number == '') {
         alert('please enter number');
     }
@@ -70,76 +73,13 @@ function sendMsg() {
             type: 'post',
             data: 'name=' + name + '&email=' + email + '&number=' + number + '&EnquiryTopic=' + EnquiryTopic + '&message=' + message,
             success: function (result) {
-                alert('message sent');
+                alert('Message sent');
+               window.history.go();
             }
         })
     }
 }
-function userReg() {
-    jQuery('.field_error').html('');
-    var name = jQuery('#reg_username').val();
-    var email = jQuery('#reg_email').val();
-    var password = jQuery('#reg_password').val();
-    var is_error = '';
-    if (name == '') {
-        jQuery('#reg_username_error').html('Please enter name');
-        is_error = 'yes';
-    }
-    if (email == '') {
-        jQuery('#reg_email_error').html('Please enter email');
-        is_error = 'yes';
-    }
-    if (password == '') {
-        jQuery('#reg_password_error').html('Please enter password');
-        is_error = 'yes';
-    }
-    if (is_error == '') {
-        jQuery.ajax({
-            url: 'user_register.php',
-            type: 'post',
-            data: 'name=' + name + '&email=' + email + '&password=' + password,
-            success: function (result) {
-                if (result == 'email present') {
-                    console.log(result);
-                    jQuery('#reg_email_error').html('email already exists');
-                }
-                if (result == 'insert') {
-                    jQuery('.register_msg').html('Thanku for registering');
-                }
-            }
-        })
-    }
-}
-function userLogin() {
-    jQuery('.field_error').html('');
-    var name = jQuery('#login_username').val();
-    var password = jQuery('#login_password').val();
-    var is_error = '';
-    if (name == '') {
-        jQuery('#login_username_error').html('Please enter name');
-        is_error = 'yes';
-    }
-    if (password == '') {
-        jQuery('#login_password_error').html('Please enter password');
-        is_error = 'yes';
-    }
-    if (is_error == '') {
-        jQuery.ajax({
-            url: 'user_login.php',
-            type: 'post',
-            data: 'name=' + name + '&password=' + password,
-            success: function (result) {
-                if (result == 'wrong') {
-                    jQuery('.login_msg').html('Please enter correct details');
 
-                }
-                if (result == 'valid') {
-                    window.location.href = window.location.href;
-                }
-            }
-        })
-    }
-}
 
 function manage_cart(pid, type) {
     if (type == 'update') {

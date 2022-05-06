@@ -5,6 +5,7 @@ $product_name = clean($conn, $_GET['product_name']);
 $leftQuantity = $GetProductQtyByProductId = '';
  
 ?>
+<div class="small-container">
 <h2>Searched Products</h2>
             <div class="row">
             <?php
@@ -61,6 +62,7 @@ $leftQuantity = $GetProductQtyByProductId = '';
                 echo 'No such products found'; } //foreach loop ending?>
             </div>
             <p><a class="btn" href="products.php">Go back</a></p>
+</div>
             <?php
 include('footer.php');
 

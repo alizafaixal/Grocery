@@ -1,5 +1,6 @@
 <?php
 include('header.inc.php');
+$seqID =1;
  if(isset($_GET['type']) && $_GET['type'] != ''){
    $type = clean($conn,$_GET['type']);
    if($type == 'status'){
@@ -58,7 +59,7 @@ $res = mysqli_query($conn, $sql);
                                     <tr>
                                       
                                        
-                                       <td> <?php echo $row['category_id'] ?> </td>
+                                       <td> <?php echo $seqID++ ?> </td>
                                        <td> <?php echo $row['category_name'] ?> </td>
                                        <td><?php
 								if($row['status']==1){

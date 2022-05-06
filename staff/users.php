@@ -1,5 +1,6 @@
 <?php
 include('header.inc.php');
+$seqID = 1;
 $sql = "SELECT * FROM end_users ORDER BY `name` asc";
 $msgs = array();
 $res = mysqli_query($conn, $sql)
@@ -45,7 +46,7 @@ if($type=='delete'){
                                      <?php
                                      foreach($users as $list){?>
                                      <tr>
-                                     <td><?php echo $list['user_id'] ?></td>
+                                     <td><?php echo $seqID++ ?></td>
                                      <td><?php echo $list['name'] ?></td>
                                      <td><?php echo $list['email'] ?></td>
                                      <td><?php echo $list['password'] ?></td>

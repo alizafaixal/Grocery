@@ -1,4 +1,5 @@
 <?php
+$seqID =1;
 include('header.inc.php');
 $sql = "SELECT * FROM contact_us ORDER BY  added_on desc";
 $msgs = array();
@@ -50,7 +51,7 @@ if($type = 'delete'){
                                      <?php
                                      foreach($msgs as $list){?>
                                      <tr>
-                                     <td><?php echo $list['message_id'] ?></td>
+                                     <td><?php echo $seqID++?></td>
                                      <td><?php echo $list['user_name'] ?></td>
                                      <td><?php echo $list['user_email'] ?></td>
                                      <td><?php echo $list['user_number'] ?></td>
