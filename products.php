@@ -18,7 +18,7 @@ $category = array();
 
          <nav class="navbar navbar-expand-sm navbar-default">
             <div id="main-menu" class="main-menu collapse navbar-collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav" style="width: 100%;">
                    <?php 
                  foreach ($category as $x){ 
                
@@ -38,7 +38,7 @@ $category = array();
                 <input type="text" placeholder="Search Products..." id="search_field" name="product_name"  class="search_field">
             </form>
           
-            <h2>Latest Products</h2>
+            <h2  class="title m-40">Latest Products</h2>
             <div class="row">
             <?php
                 $sql = "select * from product order by product_id desc limit 4";
@@ -51,7 +51,7 @@ $category = array();
                 $qty =  $list['product_qty'];
                 $GetProductQtyByProductId = GetProductQtyByProductId($conn , $list['product_id']);
                ?>  
-           <div class="col-4">
+           <div class="col-4 prdct">
                   <a href="product.php?id=<?php echo $list['product_id'];?>">  <img src="<?php echo $list['product_img'];?>" alt=""></a>
                     <h4><?php echo $list['product_name'];?></h4>
                     <div class="rating">
@@ -91,7 +91,7 @@ $category = array();
                 </div>
                 <?php } //foreach loop ending?>
         </div>
-            <h2>All Products</h2>
+            <h2  class="title m-40">All Products</h2>
          
             <div class="row">
             <?php
@@ -102,7 +102,7 @@ $category = array();
                $qty =  $list['product_qty'];
                $GetProductQtyByProductId = GetProductQtyByProductId($conn , $list['product_id']);
                ?>  
-            <div class="col-4">
+            <div class="col-4 prdct">
                   <a href="product.php?id=<?php echo $list['product_id'];?>">  <img src="<?php echo $list['product_img'];?>" alt=""></a>
                     <h4><?php echo $list['product_name'];?></h4>
                     <div class="rating">

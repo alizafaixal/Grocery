@@ -11,10 +11,10 @@ $loginpasswordErr='';
 $password='';
 ?>
 <div class="container form_container">
-<h1>Create an account</h1>
+<h1 class="title m-40">Create an account</h1>
 
-<div class="row">
-                <div class="col">
+<div class="row accountforms">
+                <div class="col" style="width: 40%;">
                 <?php
                   if(isset($_POST['Logsubmit'])){
                     $name = mysqli_real_escape_string($conn, $_POST['login_username']);
@@ -44,8 +44,8 @@ $password='';
                 }
                   }
                 ?>
-                    <form id="LoginForm" method="post">
-                    <h2>Login</h2>
+                    <form id="LoginForm" method="post" style="background: #eeeeee;padding: 8%;border-radius: 10px; height: 477px;">
+                    <h2 >Login</h2>
                         <label for="login_username">Username: </label><input type="text" name="login_username" id="login_username" placeholder="Username"> 
                          <br> <span class="field_error" id="login_username_error"><?php if(isset($nameErr)){ echo $nameErr ;}?></span>
                      <label for="login_password">Password: </label> <input type="password"   name="login_password" id="login_password" placeholder="password">
@@ -55,7 +55,7 @@ $password='';
                             <p class="field_error login_msg"><?php if (isset($logError)){ echo $logError ;}?></p>
                         </form>
                 </div>
-         <div class="col">
+         <div class="col" style="width: 40%;">
                 <?php
                   if(isset($_POST['Regsubmit'])){
                     $username = mysqli_real_escape_string($conn, $_POST['reg_username']);
@@ -86,8 +86,8 @@ $password='';
                 }
                   $user_id = mysqli_insert_id($conn); 
               ?>
-                    <form id="RegForm"  method="post">
-                    <h2>Register</h2>
+                    <form id="RegForm"  method="post" style="background: #eeeeee;padding: 8%;border-radius: 10px;">
+                    <h2 >Register</h2>
                     <label for="reg_username">Username: </label><input type="text"  name="reg_username" id="reg_username" placeholder="Username">
                                 <br> <span class="field_error" id="reg_username_error"><?php if(isset($usernameErr)){ echo $usernameErr ;}?></span>
                                 <label for="reg_email">Email: </label> <input type="email"  name="reg_email" id="reg_email" placeholder="Email">

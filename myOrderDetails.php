@@ -14,7 +14,7 @@ $order_id= clean($conn, $_GET['id']);
 
    <div class="small-container cart-page">
         <table>
-            <h1>order details <small><?php echo $order_id;?></small></h1>
+            <h1 class="title m-40">Order details <small><?php echo $order_id;?></small></h1>
             <tr>
                 <th>
                    product name

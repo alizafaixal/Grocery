@@ -4,6 +4,59 @@
     padding: 0;
     
 }
+/*  */
+li.menu-item-has-children.dropdown {
+    background: #fd543b;
+    padding: 8px;
+    margin-right: 15px;
+    border-radius: 5px;
+    /* color: white; */
+    margin-top: 10px;
+    cursor: pointer;
+    transition: translate 2s ease-in-out;
+    margin: 16px;
+    margin-left: 0;
+    width: 332px !important;
+    text-align: center;
+}
+/* li.menu-item-has-children.dropdown a:after{
+content: "";
+display: block;
+position: absolute;
+top: 0;
+left: 100%;
+border-style: solid;
+border-color: transparent #F78E1E;
+border-width: 15px 0 15px 15px;
+width: 0;
+height: 0;
+} */
+li.menu-item-has-children.dropdown:hover{
+    translate: y(10px);
+}
+li.menu-item-has-children.dropdown a {
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.fa-shopping-cart, .total{
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+/* ul li.menu-item-has-children.dropdown:after{
+    content: ">";
+} */
+
+li.menu-item-has-children.dropdown:nth-child(3){
+    margin-right: 0;
+}
+li.menu-item-has-children.dropdown:nth-child(6){
+    margin-right: 0;
+}
+/*  */
 .formH2-login{
  margin-top: -20px;
 }
@@ -39,13 +92,13 @@ body{
     margin-right:20px ;
 }
 .home_navbar nav ul li a{
-    color: #555;
+    color: white;
+    font-weight: 500;
 }
 p{
     color: #555;
 }
 .container{
-    max-height: 1400px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
@@ -53,12 +106,12 @@ p{
 
 .row{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
 .col-2{
-    flex-basis: 50%;
+    flex-basis: 45%;
     min-width: 300px;
 }
 
@@ -76,26 +129,75 @@ p{
     margin: 25px 0;
     font-weight: 300;
     font-style: italic ;
-    margin-left: 50px;
-}
-.col-2 p {
-    margin-left: 50px;
+    margin-left: 0px;
 
 }
+/* .col-2 p {
+    margin-left: 50px;
+
+} */
+.prdct h4{
+    padding: 10px 0px;
+    font-size: 14px;
+}
+.prdct .rating{
+    padding: 0px 0px 10px 0px;
+}
+.prdct p{
+    padding: 7px 0px;
+}
+
 .btn{
     display: inline-block;
-    margin: 30px 0;
+    margin: 10px 0;
     padding: 8px 30px;
     color: #fff;
     border-radius: 30px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     background-color: #ff543b;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
 }
 .btn:hover{
     background: #563434;
 }
+.backbtn{
+    width: 25%;
+    margin-bottom: 50px;
+    padding: 16px 6px;
+}
+.m-40{
+    margin: 40px 0 !important;
+   
+}
+.m-20{
+    margin-top: 40px !important;
+    margin-bottom: 0px !important;
+}
+.btn-sm {
+    color: #fff;
+    background-color:  #fd543be0;
+    border-color:  #c33e2ae0;
+    width: 40% !important;
+
+}
+
+.btn-sm:hover{
+    background: #ff523b;
+    color: #fff;
+    border-color:  #b65c4ee0;
+}
+.thankLink{
+    color: #ff523b;
+    text-decoration: underline;
+}
 .header{
-    background: radial-gradient(#fff,#ff543b );
+    background: #fd543be0;
+}
+.exploreBtn{
+    width: 50%;
+    padding: 14px 30px;
 }
 .header .row{
     margin-top: 70px;
@@ -123,16 +225,21 @@ a i {
     padding-right: 25px;
 }
 .col-4{
-    flex-basis: 25%;
-    padding: 10px;
+    flex-basis: 24%;
+    padding: 23px;
     min-width: 200px;
     margin-bottom: 50px;
     transition: transform 0.5s;
+    background: #edebeb;
+    border-radius: 10px;
 }
 .col-4 img{
     width: 100%;
-    height: 237.5px;
-    padding: 0px 30px;
+    height: 150px;
+    /* padding: 0px 30px; */
+    /* background: black; */
+    padding: 6%;
+    border-radius: 20px;
 }
 .title{
     text-align: center;
@@ -174,7 +281,7 @@ h4{
     padding: 50px;
 }
 .col-2 p {
-    margin-top: 20px;
+    margin: 20px 0px;
 }
 /* testimonals */
 .testimonal{
@@ -190,7 +297,8 @@ h4{
 .testimonal .col-3 img{
     width: 50px;
     margin-top: 20px;
-    border-radius: 50%;
+    border-radius: 58%;
+    height: 50px;
 }
 .testimonal .col-3:hover{
     transform: translateY(-10px);
@@ -225,53 +333,18 @@ h4{
     filter: grayscale(0);
 }
 .footer{
-    color: #000;
-    background-color: #8a8a8a;
+    background: #ff543b;
     font-size: 14px;
-    padding: 60px 0 20px;
+    padding: 20px 0 20px;
 }
 .footer p{
-    color: #000;
+    color: white;
+    text-align: center;
 }
-.footer h3{
-    color: #000;
-    margin-bottom: 20px;
-}  
-.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
-    min-width: 250px;
-    margin-bottom: 20px;
 
-} 
-.footer-col-1{
-    flex-basis: 30%;
-}
-.footer-col-1 .app-logo img{
-    width: 140px;
-}
-.footer-col-2{
-    flex:1;
-    text-align: center;
-}
-.footer-col-2 img {
-    width: 180px;
-    margin-bottom: 20px;
-}
-.footer-col-3, .footer-col-4{
-    flex-basis: 12%;
-    text-align: center;
-}
+
 ul{
     list-style: none;
-}
-.footer hr{
-    border: none;
-    background: #b5b5b5;
-    height: 1px;
-    margin: 20px 0;
-
-}
-.copyright{
-    text-align: center;
 }
 /* hamburger styling */
 .menu-icon{
@@ -340,10 +413,7 @@ ul{
     justify-content: space-between;
     margin: 100px auto 50px;
 }
-select{
-    border: 1px solid #ff523b;
-    padding: 5px;
-}
+
 select:focus{
     outline: none;
 }
@@ -365,10 +435,10 @@ select:focus{
     color: #fff;
 }
 /* single product */
-.single-product{
+/* .single-product{
     margin-top: 80px;
 
-}
+} */
 .single-product .col-2 img{
     padding: 0;
 
@@ -422,6 +492,7 @@ select:focus{
 /* cart page */
 .cart-page{
     margin: 80px auto;
+    min-height: 476px;
 }
 table{
     width: 100%;
@@ -462,7 +533,7 @@ td img{
 .total-price table{
     border-top: 3px solid #ff523b;
     width: 100%;
-    max-width: 400px;
+    max-width: 357px;
 }
 td:last-child{
     text-align: right;
@@ -527,14 +598,14 @@ form input{
     width: 100%;
     height: 30px;
     margin: 10px 0;
-    padding: 0 10px;
+    padding: 30px 18px;
     border: 1px solid #ccc;
 }
 form .btn{
     widows: 100%;
     border: none;
     cursor: pointer;
-    margin: 10px 0;
+    margin: 20px 0;
 
 }
 form .btn:focus{
@@ -562,31 +633,39 @@ form a{
 /* contact page styling */
 
 .box{
-
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    height: 1223px;
+    align-items: center;
 }
 .box form{
     margin-top: 20px;
+    margin-bottom: 59px;
     border-radius: 10px;
     width: 46%;
-    height: 836px;
+    height: fit-content;
     border: 2px dashed #ff523b;
     background-color: white;
+}
+.submitBtn , .visitBtn{
+    width: 30%;
 }
 .box form p , .box .map p  {
     margin-left: 5px;
     text-align: center;
-    padding: 5px 10px;
+    padding: 20px 10px;
 }
-.box .map h2, .box form h2{
+.box .map h2, .box form h2 , .accountforms h2{
     text-align: center;
     font-size: 24px;
     margin-top:3vh;
     color:#ff523b;
     font-weight: 800;
+}
+.accountforms h2{
+    text-align: left;
+    margin-top:1vh;
+    margin-bottom: 3vh;
 }
 
 
@@ -594,6 +673,7 @@ form a{
 .box iframe{
     width: 80%;
     margin-top: 0px;
+    margin-bottom: 21px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -603,16 +683,25 @@ form a{
     margin-top: 11px;
     width: 46%;
     margin-top: 5vh;
-    height: 453px;
+    height: fit-content;
     border-radius: 12px;
     border: 2px dashed #ff523b;
     box-shadow: 15px 10px 12px 2px rgb(0 28 56);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.box input[type=text] , .box input[type=tel] , .box input[type=email]{
+.box input[type=text] , .box input[type=tel] , .box input[type=email], select{
     margin-bottom: 10px;
-   margin-left: 11px;
-    width: 90%;
+   margin-left: 14px;
     height: 40px;
+}
+
+select{
+    padding: 5px;
+    margin: 18px 0px 10px 18px;
+    cursor: pointer;
 }
 .box input[type=checkbox]{
     margin-left: 45px;
@@ -627,16 +716,23 @@ form a{
     color:#ff523b;
 }
 .box form{
-      box-shadow: 15px 0px 12px 2px rgb(3 45 86);
+      /* box-shadow: 15px 0px 12px 2px rgb(3 45 86); */
+      box-shadow: 15px 0px 27px 0px rgb(3 45 86);;
 }
 .box label{
-    margin-left: 20px;
+    margin-left: 14px;
     font-size: 20px;
-    font-style:italic ;
+}
+.accountforms{
+    justify-content: space-around; 
+    margin: 90px 0px; 
+    align-items: flex-start;
 }
 .box .map .btn{
     margin-top: 5px;
-    margin-left: 100px;
+    outline: none;
+    border: none;
+    margin-bottom: 20px;
 
 }
 .form-container span{
@@ -667,7 +763,8 @@ form a{
   
   .col-75 {
     -ms-flex: 75%; /* IE10 */
-    flex: 75%;
+    flex: 51%;
+    padding: 5% !important;
   }
   
   .col-25,
@@ -685,7 +782,6 @@ form a{
   } */
   
   label {
-    margin-bottom: 10px;
     display: block;
   }
   

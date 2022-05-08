@@ -6,7 +6,7 @@ $leftQuantity = $GetProductQtyByProductId = '';
  
 ?>
 <div class="small-container">
-<h2>Searched Products</h2>
+<h2 class="title m-40">Searched Products</h2>
             <div class="row">
             <?php
                 $sql = "SELECT * FROM `product`where product_name LIKE '%$product_name%' OR product_desc LIKE  '%$product_name%'";
@@ -19,7 +19,7 @@ $leftQuantity = $GetProductQtyByProductId = '';
                 $GetProductQtyByProductId = GetProductQtyByProductId($conn , $list['product_id']);
                ?>  
            
-                <div class="col-4">
+                <div class="col-4 prdct">
                 <a href="product.php?id=<?php echo $list['product_id'];?>">  <img src="<?php echo $list['product_img'];?>" alt=""></a>
                     <h4><?php echo $list['product_name'];?></h4>
                     <div class="rating">
@@ -61,7 +61,7 @@ $leftQuantity = $GetProductQtyByProductId = '';
                 else{
                 echo 'No such products found'; } //foreach loop ending?>
             </div>
-            <p><a class="btn" href="products.php">Go back</a></p>
+            <p><a class="btn backbtn" href="products.php">Go back</a></p>
 </div>
             <?php
 include('footer.php');

@@ -32,7 +32,7 @@ if(!isset($_SESSION['USER_LOGIN'])){
 
    <div class="small-container cart-page">
         <table>
-            <h1>My orders</h1>
+            <h1 class="title m-40">My orders</h1>
             <tr>
                 <th>
                     Order ID

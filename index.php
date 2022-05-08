@@ -3,10 +3,10 @@ include('header.php');
 
 ?>
             <div class="row banner">
-                <div class="col-2">
+                <div style="padding: 0px 100px;" class="col-2">
                     <h1>The Grocery Shop</h1>
-                    <p>Buy Your favourite groceries online at great price</p>
-                    <a href="products.php" class="btn">Explore now &#8594;</a>
+                    <p>Buy your favourite groceries online at great price</p>
+                    <a href="products.php"class="btn exploreBtn">Explore now &#8594;</a>
                 </div>
                 <div class="col-2">
                     <img src="images/banner.jpg" alt="banner">
@@ -45,7 +45,7 @@ include('header.php');
         }
          foreach($data as $list){
         ?>  
-          <div class="col-4">
+          <div class="col-4 prdct">
                 <a href="product.php?id=<?php echo $list['product_id'];?>">  <img src="<?php echo $list['product_img'];?>" alt=""></a>
                 <a href="product.php?id=<?php echo $list['product_id'];?>"> <h4><?php echo $list['product_name'];?></h4> </a>
                     <div class="rating">

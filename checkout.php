@@ -80,15 +80,18 @@ if(!isset($_SESSION['USER_LOGIN'])){?>
 
                     <?php }else{
 ?>
+ <h1 class="title m-20">Checkout</h1>
  <div class="row3">
+   
   <div class="col-75">
     <div class="container ">
+   
       <form action="checkout.php" method="post">
 
         <div class="row3">
           <div class="col-50">
             <h3>Billing Address</h3>
-            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <label style="margin-top: 20px;" for="adr">Address</label>
             <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
             <label for="city"><i class="fa fa-institution"></i> City</label>
             <input type="text" id="city" name="city" placeholder="New York">
@@ -106,21 +109,21 @@ if(!isset($_SESSION['USER_LOGIN'])){?>
             </div>
           </div>
 
-          <div class="col-75">
+          <div style="padding: 10px 0px 0px 18px!important;" class="col-75">
             <h3>Payment</h3>
-           <label for="cod">Cash on Delivery(COD)</label> <input name="PaymentMethod" type="radio" value="cod" id="cod">
+           <label for="cod">Cash on Delivery(COD)</label> <input style="width: 4%;" name="PaymentMethod" type="radio" value="cod" id="cod">
           
           </div>
 
         </div>
-        <input type="submit" name="submit" value="Continue to checkout" class="btn">
+        <input type="submit" name="submit" value="Continue to checkout" style="width: auto;" class="btn">
       </form>
     </div>
   </div>
                     <?php } ?>
 
-  <div class="col-25 cart-box">
-    <div class="container ">
+  <div style="margin: 0px 100px;" class="col-25 cart-box">
+    <div style="width: 93%;padding: 20px 0px;" class="container ">
       <h4>Cart
         <span class="price" style="color:black">
           <i class="fa fa-shopping-cart"></i>
@@ -146,7 +149,7 @@ if(!isset($_SESSION['USER_LOGIN'])){?>
                 ?>
         <tr>
                 <td>
-                    <div class="cart-info">
+                    <div style="margin: 15px 0px;" class="cart-info">
                         <img src="<?php echo $img; ?>" alt="">
                         <div>
                             <p><?php echo $pname; ?></p>
@@ -156,7 +159,7 @@ if(!isset($_SESSION['USER_LOGIN'])){?>
                         </div>
                     </div>
                 </td>
-                <td><input type="number" id="<?php echo $key?>qty" value="<?php echo $qty?>"> <br>
+                <td><input style="margin: 0px 0px 10px 0px;" type="number" id="<?php echo $key?>qty" value="<?php echo $qty?>"> <br>
                 <a href="javascript:void(0)" onclick="manage_cart('<?php echo $key;?>','update')">Update</a>
             </td>
                 <td><?php echo '$' . $price * $qty; ?></td>

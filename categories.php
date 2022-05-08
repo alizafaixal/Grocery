@@ -5,7 +5,7 @@ $category_id = $_GET['id'];
 $leftQuantity = $GetProductQtyByProductId = '';
 ?>
 <div class="small-container">
-<h2>Products in Category</h2>
+<h2 class="title m-40">Products in Category</h2>
  <div class="row">
  <?php
            if($category_id>0){
@@ -24,7 +24,7 @@ $leftQuantity = $GetProductQtyByProductId = '';
           $qty =  $list['product_qty'];
           $GetProductQtyByProductId = GetProductQtyByProductId($conn , $list['product_id']);
             ?>  
-         <div class="col-4">
+         <div class="col-4 prdct">
                <a href="product.php?id=<?php echo $list['product_id'];?>">  <img src="<?php echo $list['product_img'];?>" alt=""></a>
                  <h4><?php echo $list['product_name'];?></h4>
                  <div class="rating">
@@ -62,7 +62,7 @@ $leftQuantity = $GetProductQtyByProductId = '';
                  <?php  }?>
              </div>
              <?php } //foreach loop ending?>
-             <p><a class="btn" href="products.php">Go back</a></p>
+             <p><a class="btn " href="products.php">Go back</a></p>
      </div>
        
         

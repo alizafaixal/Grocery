@@ -6,7 +6,7 @@ $leftQuantity = $GetProductQtyByProductId = '';
  $GetProductQtyByProductId = GetProductQtyByProductId($conn , $product_id);
 ?>
 <div class="small-container">
-<h2>Product Details</h2>
+<h2  class="title m-40">Product Details</h2>
  <div class="row">
 
          <div class="small-container single-product">
@@ -48,13 +48,13 @@ $leftQuantity = $GetProductQtyByProductId = '';
                  </div>
              </div>
              <div class="col-2">
-                 <p> <a href="index.php">Home</a>/
-                   <a href="categories.php?id=<?php echo $list['category_id'];?>"><?php echo $list['category_name'];?></a>/ 
+                 <p> <a href="index.php">Home</a> >
+                   <a href="categories.php?id=<?php echo $list['category_id'];?>"><?php echo $list['category_name'];?></a> > 
                    <a href="product.php?id=<?php echo $list['product_id'];?>"><?php echo $list['product_name'];?></a>
                    </p>
                  <h1><?php echo $list['product_name'];?></h1>
                  <div class="rating">
-                     <i class="fa fa-star"></i>
+                     <i style="margin-left: 0px;" class="fa fa-star"></i>
                      <i class="fa fa-star"></i>
                      <i class="fa fa-star"></i>
                      <i class="fa fa-star"></i>
@@ -75,7 +75,7 @@ $leftQuantity = $GetProductQtyByProductId = '';
                     <p>Quantity Left: <?php echo $leftQuantity  ?> Sold: <?php if($GetProductQtyByProductId == 0) {echo 0;} else{ echo $GetProductQtyByProductId;}?></p>
                     <?php if($leftQuantity >0 ){ ?>
                     <p><span>Select Quantity</span>
-                    <select id="qty">
+                    <select style="margin-left: 0px;" id="qty">
                     <?php for($i = 1; $i <= $leftQuantity; $i++){?>
                     <option ><?php  echo $i ?></option>
                     <?php } ?>
@@ -86,14 +86,14 @@ $leftQuantity = $GetProductQtyByProductId = '';
                  <?php if($leftQuantity >0 ){ ?>
                  <a href="javascript:void(0)" onclick="manage_cart('<?php echo $list['product_id'];?>' ,'add')" class="btn">Add to cart→</a>
                  <?php  }?>
-                 <h3>Small Description <i class="fa fa-indent"></i></h3>
+                 <h3 style="margin-top: 20px;">Small Description <i class="fa fa-indent"></i></h3>
 
                  <p><?php echo $list['product_short_desc'];?></p>
                  <p><?php echo $list['product_desc'];?></p>
 
              </div>
          </div>
-         <p><a class="btn" href="products.php">Go back</a></p>
+         <p><a  class="btn backbtn" href="products.php">Go back</a></p>
      </div> 
              <?php } //foreach loop ending?>
      </div>

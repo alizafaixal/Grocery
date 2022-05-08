@@ -69,8 +69,8 @@ include('header.php');
                 </tr>
             </table>
         </div>
-        <a href="products.php" class="btn">Continue shopping</a>
-        <a href="checkout.php" class="btn">Checkout</a>
+        <a style="width: auto; margin-right: 20px;" href="products.php" class="btn">Continue shopping</a>
+        <a style="width: auto;" href="checkout.php" class="btn">Checkout</a>
     </div>
     <?php
 include('footer.php');
